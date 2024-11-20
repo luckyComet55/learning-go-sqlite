@@ -52,6 +52,7 @@ func exists(username string) (int, error) {
 		}
 		userID = id
 	}
+	fmt.Printf("found user with id: %d\n", userID)
 	return userID, nil
 }
 
