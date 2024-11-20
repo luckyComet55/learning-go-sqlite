@@ -36,7 +36,7 @@ func exists(username string) (int, error) {
 	}
 	defer db.Close()
 	userID := -1
-	query := `SELECT * FROM users WHERE Username='?'`
+	query := `SELECT ID FROM users WHERE Username='?'`
 	rows, err := db.Query(query, username)
 	if err != nil {
 		fmt.Printf("error while query: %s\n", err)
